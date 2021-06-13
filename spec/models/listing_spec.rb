@@ -209,6 +209,11 @@ describe Listing do
           neighborhood: santa_monica, 
           host: user) } 
 
+        before :each do 
+          first_listing
+          second_listing
+        end
+
       it 'changes host status to false' do 
         expect(user.host).to eq(true)
         first_listing.destroy
